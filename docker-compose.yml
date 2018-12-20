@@ -1,0 +1,25 @@
+version: '2'
+services:
+  seed_node:
+    image: "datastax/dse-server:6.7.0"
+    environment:
+      - DS_LICENSE=accept
+      - JVM_EXTRA_OPTS=-Xmx2g -Xms2g
+    # Allow DSE to lock memory with mlock
+    cap_add:
+    - IPC_LOCK
+    ulimits:
+      memlock: -1
+  node:
+    image: "datastax/dse-server:6.7.0"
+    environment:
+      - DS_LICENSE=accept
+      - SEEDS=seed_node
+      - JVM_EXTRA_OPTS=-Xmx2g -Xms2g
+    links:
+      - seed_node
+    # Allow DSE to lock memory with mlock
+    cap_add:
+    - IPC_LOCK
+    ulimits:
+      memlock: -1
