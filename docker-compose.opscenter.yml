@@ -7,9 +7,9 @@ services:
     environment:
       - DS_LICENSE=accept
   seed_node:
-    links:
+    depends_on:
       - opscenter
   node:
-    links:
+    depends_on:
       - opscenter
 
