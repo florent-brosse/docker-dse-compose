@@ -14,14 +14,19 @@
 http://localhost:5601/app/kibana
 
 # enable filebeat
-`docker exec -it --user=root elk_node1 bash`
-`wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash`
+```bash
+docker exec -it --user=root elk_node1 bash
+wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash
+```
 
-`docker exec -it --user=root elk_node2 bash`
-`wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash` 
+```bash
+docker exec -it --user=root elk_node2 bash
+wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash
+```
 
 
-```#!/bin/bash
+```bash
+#!/bin/bash
 apt update
 apt install curl -y
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-amd64.deb
@@ -62,7 +67,8 @@ EOF
 
 
 # enable collectd 
-```docker exec -it --user=root elk_node1 bash
+```bash
+docker exec -it --user=root elk_node1 bash
 vim /opt/dse/resources/dse/collectd/etc/collectd/10-statsd.conf
 LoadPlugin network
 <Plugin network>
@@ -79,6 +85,7 @@ idem for node2
 
 
 https://datastax.jira.com/browse/DSP-17319
+
 https://datastax.jira.com/browse/DSP-17869
 
 
