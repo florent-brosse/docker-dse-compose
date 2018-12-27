@@ -14,13 +14,11 @@
 http://localhost:5601/app/kibana
 
 # enable filebeat
-```docker exec -it --user=root elk_node1 bash
-wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash
-```
+`docker exec -it --user=root elk_node1 bash`
+`wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash`
 
-```docker exec -it --user=root elk_node2 bash
-wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash
-``` 
+`docker exec -it --user=root elk_node2 bash`
+`wget -O - https://gist.githubusercontent.com/florent-brosse/3817c068386a333300c0cef3dcd086b6/raw/babb9170b497b08fd161d0b76e41c1d5735a7c92/dse_filebeat.sh | bash` 
 
 
 ```#!/bin/bash
