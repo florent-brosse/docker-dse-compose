@@ -1,8 +1,5 @@
 #!/bin/bash
-apt update
-apt install curl -y
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-amd64.deb
-dpkg -i filebeat-6.5.4-amd64.deb
+dpkg -i ~/filebeat/filebeat-*.deb
 
 cat > /etc/filebeat/filebeat.yml <<EOF
 output.elasticsearch:

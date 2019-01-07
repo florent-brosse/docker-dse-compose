@@ -2,6 +2,9 @@
 This repository show how to monitore DSE with ELK. JMX with insight monitoring (https://docs.datastax.com/en/dse/6.7/dse-dev/datastax_enterprise/tools/metricsCollector/mcIntroduction.html) DSE 6.7 -> collectd -> logstash and Cassandra log -> filebeat.
 I don't use docker logs features, docker is used only to provide an easy way to create a DSE and ELK cluster.
 
+## download filebeat locally
+curl -L -o bin/filebeat-6.5.4-amd64.deb https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-amd64.deb
+
 `docker-compose up -d`
 
 ## display indices from ES
