@@ -34,12 +34,13 @@ cat filebeat/filebeat_install.sh | bash
 # enable collectd 
 ```bash
 docker exec -it --user=root elk_node1 bash
-vim /opt/dse/resources/dse/collectd/etc/collectd/10-statsd.conf
+cat > /opt/dse/resources/dse/collectd/etc/collectd/10-statsd.conf <<EOF
 LoadPlugin network
 <Plugin network>
     <Server "logstash" "25826">
     </Server>
 </Plugin>
+EOF
 
 dsetool insights_config --mode DISABLED
 dsetool insights_config --mode ENABLED_WITH_LOCAL_STORAGE
