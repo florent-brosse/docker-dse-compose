@@ -36,7 +36,7 @@ object WriteRead extends App {
   CassandraConnector(spark.sparkContext).withSessionDo { session =>
     session.execute(
       """CREATE KEYSPACE IF NOT EXISTS ks WITH
-        | replication = {'class': 'SimpleStrategy', 'replication_factor': 1 }""".stripMargin)
+        | replication = {'class': 'SimpleStrategy', 'replication_factor': 2 }""".stripMargin)
     session.execute("""CREATE TABLE IF NOT EXISTS ks.kv1 (id text, data text, PRIMARY KEY (id))""")
     session.execute("""CREATE TABLE IF NOT EXISTS ks.kv2 (id text, time text, data text, PRIMARY KEY (id,time))""")
 
