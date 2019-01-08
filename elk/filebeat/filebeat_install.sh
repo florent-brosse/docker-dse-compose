@@ -7,7 +7,7 @@ output.elasticsearch:
     hosts: ["elasticsearch:9200"]
 setup.kibana:
   host: "kibana:5601"
-setup.dashboards.enabled: true
+#setup.dashboards.enabled: true
 filebeat.inputs:
     - type: log
       paths:

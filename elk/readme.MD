@@ -50,6 +50,10 @@ dsetool insights_config --mode ENABLED_WITH_LOCAL_STORAGE
 idem for node2
 
 
+## generate Data
+cd generateData
+mvn exec:java -Dexec.mainClass="com.datastax.spark.example.WriteRead"
+
 https://datastax.jira.com/browse/DSP-17319
 
 https://datastax.jira.com/browse/DSP-17869
