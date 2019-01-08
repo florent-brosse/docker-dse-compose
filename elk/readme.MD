@@ -53,6 +53,7 @@ idem for node2
 ## generate Data
 ```bash
 cd generateData
+mvn clean compile
 mvn exec:java -Dexec.mainClass="com.datastax.spark.example.WriteRead"
 ```
 
