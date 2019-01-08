@@ -5,6 +5,7 @@ I don't use docker logs features, docker is used only to provide an easy way to 
 ## download filebeat locally
 curl -L -o bin/filebeat-6.5.4-amd64.deb https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-amd64.deb
 
+## Launch the DSE and ELK clusters
 `docker-compose up -d`
 
 ## display indices from ES
