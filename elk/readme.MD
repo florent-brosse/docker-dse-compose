@@ -51,8 +51,10 @@ idem for node2
 
 
 ## generate Data
+```bash
 cd generateData
 mvn exec:java -Dexec.mainClass="com.datastax.spark.example.WriteRead"
+```
 
 https://datastax.jira.com/browse/DSP-17319
 
