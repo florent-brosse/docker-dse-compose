@@ -9,6 +9,7 @@ services:
     # Allow DSE to lock memory with mlock
     cap_add:
     - IPC_LOCK
+    command: [ -s ]
     ulimits:
       memlock: -1
   node:
@@ -23,5 +24,6 @@ services:
     # Allow DSE to lock memory with mlock
     cap_add:
     - IPC_LOCK
+    command: [ -s ]
     ulimits:
       memlock: -1
