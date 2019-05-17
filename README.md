@@ -17,3 +17,7 @@ Click Install agents manually. Note that the agent is already installed on the D
 
 # launch multi DC DSE cluster
 `docker-compose -f docker-compose-multiDC.yml up -d`
+
+## wait-for-DSE.sh 
+It uses wait-for-DSE.sh to wait that DSE is really ready before lauching the next DSE nodes.
+
